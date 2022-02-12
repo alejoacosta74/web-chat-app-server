@@ -16,7 +16,7 @@ var (
 	app            = kingpin.New("chat-server", "A real time multithreading chat application server.")
 	logFile        = app.Flag("log-file", "write logs to a file").Envar("LOG_FILE").Default("").String()
 	devMode        = app.Flag("dev", "[Insecure] Developer mode").Envar("DEV").Default("false").Bool()
-	serverIP       = app.Flag("ip address", "Server address.").Default("127.0.0.1").IP()
+	serverIP       = app.Flag("ipaddress", "Server address.").Default("127.0.0.1").IP()
 	serverPort     = app.Flag("port", "Server port number.").Default("8000").Int()
 	singleThreaded = app.Flag("singleThreaded", "[Non-production] Process http request in a single thread").Envar("SINGLE_THREADED").Default("false").Bool()
 )
